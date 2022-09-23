@@ -5,7 +5,7 @@ class Chamado:
     connection = mysql.connector.connect(
         host = 'localhost',
         user = 'root',
-        password = '190709-Nss',
+        password = ' ',
         database = 'ouvidoria'   
         )
 

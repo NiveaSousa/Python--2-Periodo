@@ -1,6 +1,11 @@
-A = int(input("Digite um número: "))
-B = int(input("Digite outro número: "))
+N = int(input())
 
-SOMA = A+B
 
-print("SOMA =",SOMA)
+horas = N // 3600
+minutos = N % 3600
+minutos = minutos//60
+segundos = N% 60
+
+
+print(f'{horas}:{minutos}:{segundos}')
+

@@ -1,0 +1,13 @@
+lista = []
+
+
+for i in range(11):
+    pedir = input('Digite nome de frutas:')
+    lista.append(pedir)
+    print(lista)
+
+
+#lista.sort(reverse=True)
+#lista.remove("a")
+#print(lista)
+

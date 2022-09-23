@@ -1,0 +1,36 @@
+from curses.ascii import isalpha
+import registros_classe
+
+
+opcao = '0'
+novo = registros_classe.Chamado()
+print('\nSistema de Ouvidoria\n')
+while opcao != '4':
+
+    print('Menu do Sistema\n 1 ABRIR CHAMADOS\n 2 LISTAR CHAMADOS\n 3 REMOVER\n 4 SAIR')
+    opcao = input('\nDigite a sua opcao: \n')
+
+    if opcao == '1':
+        titulo = input('\nDigite o tipo do chamado: \na) Reclamação \nb) Dúvida \nc) Sugestão \nd) Elogio\n ')
+        conteudo = input('Digite sua %s:' %(titulo))
+        titulo = titulo.upper()
+        
+        print(novo.cadastrar(titulo, conteudo))
+        
+
+    elif opcao == '2':
+        titulo = input('\nDigite o que você quer listar: \na) Reclamação \nb) Dúvida \nc) Sugestão \nd) Elogio \n')
+        titulo = titulo.upper()
+        novo.listCham(titulo)
+        
+
+
+    elif opcao == '3':
+        titulo = input('\nO que deseja remover? \na) Reclamação \nb) Dúvida \nc) Sugestão \nd) Elogio \n')
+        titulo = titulo.upper()
+        novo.listCham(titulo)
+        id = input(f'\n Selecione o ID: \n')
+        novo.removeChamado(id)
+        
+else:
+    print('Obrigado por usar o Sistema de Ouvidoria da nossa empresa')
